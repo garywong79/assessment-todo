@@ -29,7 +29,7 @@ case command
 		puts "[ADD] task name - create a new task"
 		puts "[DELETE] task number - delete the task"
 		puts "[COMPLETE] task number - set task to complete"
-		puts "[SORT] - sort the task date ascending order!"
+		puts "[SORT] - sort the task date in ascending order!"
 		puts "[SUMMARY] - display task statistic"
 
 	end
