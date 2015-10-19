@@ -6,10 +6,13 @@ class Task < ActiveRecord::Base
 		end
 	end
 
-	def self.add
+	def self.add(task_detail)
+		Task.create(description: task_detail, status: "[]", date_created: Date.today)
+		puts "Task: #{[task_detail]} is added on #{Time.now}!"
 	end
 
-	def self.delete
+	def self.delete(num)
+		
 	end
 
 	def self.complete
