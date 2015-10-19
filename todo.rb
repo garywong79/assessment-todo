@@ -1,8 +1,9 @@
 require_relative 'config/application'
 require_relative 'app/models/task'
+require_relative 'app/controllers/todo'
 require 'date'
-# p Task.column_names 
-# p Task.all
+# p Todo.column_names 
+# p Todo.all
 
 # puts "Put your application code in #{File.expand_path(__FILE__)}"
 
@@ -11,17 +12,17 @@ command = ARGV.shift.downcase
 case command
 
 	when 'list'
-		Task.list
+		Todo.list
 	when 'add'
-		Task.add(ARGV.join(" "))
+		Todo.add(ARGV.join(" "))
 	when 'delete'
-		Task.delete(ARGV.join(" ").to_i)
+		Todo.delete(ARGV.join(" ").to_i)
 	when 'complete'
-		Task.complete(ARGV.join(" ").to_i)
+		Todo.complete(ARGV.join(" ").to_i)
 	when "summary"
-		Task.summary
+		Todo.summary
 	when "sort"
-		Task.sort
+		Todo.sort
 	else
 		puts "Invalid Command !"
 		puts "Please enter the following [command]!"
