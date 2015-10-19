@@ -12,7 +12,9 @@ class Task < ActiveRecord::Base
 	end
 
 	def self.delete(num)
-		
+		todo = Task.all
+		todo.delete(todo[num-1])
+		puts "Task No. #{num}. #{todo[num-1].description} was deleted on #{Time.now} !"
 	end
 
 	def self.complete
