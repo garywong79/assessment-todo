@@ -1,17 +1,18 @@
 class Task < ActiveRecord::Base
 
-	def list
-		# Task.all.each_with_index do |task,index|
-		# 	puts "#{index+1}. #{task.status} #{task}
+	def self.list
+		Task.all.each_with_index do |task,index|
+			puts "#{index+1}. #{task.status} #{task.description} #{[task.date_created]}"
+		end
 	end
 
-	def add
+	def self.add
 	end
 
-	def delete
+	def self.delete
 	end
 
-	def complete
+	def self.complete
 	end
 
 end
